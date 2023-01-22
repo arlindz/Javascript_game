@@ -1,0 +1,506 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#characterMenu
+{
+     width: 100%;
+     height: 100%;
+     background-color: #662B00;
+     position: absolute;
+     display: none;
+}
+#levelsMenu
+{
+     width: 100%;
+     height: 100%;
+     background-color: #662B00;
+     display: none;
+     position: absolute;
+}
+.stageTextSlider
+{
+    cursor: pointer;
+    margin-left: 18.6%;
+    transition: margin-left 0.5s ease-in-out;
+}
+
+.slidingStage
+{
+     background-color: aliceblue;
+     border-radius: 10px;
+     border: 4px solid black;
+     display: flex;
+     align-items: center;
+     margin-top: 4%;
+     margin-left: 28%;
+     width: 15%;
+     height: 10%;
+     transition: transform 0.5s ease-in-out;
+}
+.slidingStage:hover
+{
+       transform: translateX(-60%);
+}
+.slidingStage:hover #stageName2
+{
+    margin-left: 21%;
+}
+.slidingStage:hover #stageName1{
+    margin-left: 6%;
+}
+.backButton{
+     margin-left: 3%;
+     margin-top: 5%;
+     width: 50px;
+}
+.levelHolderFirst
+{
+   top: 15%;
+   left: 42%;
+   width: 50%;
+   height: 70%;
+   background-color: #602901;
+   position: absolute;
+}
+.levelHolderSecond
+{
+   top: 3%;
+   left: 30.8%;
+   border-radius: 8px;
+   width: 50%;
+   height: 94%;
+   background-color: #4f2100;
+   position: absolute;
+}
+.level
+{
+     cursor: pointer;
+     border-radius: 20px;
+     border: 6px solid #311601;
+     background-color: #873a03;
+}
+.levelTextHolder{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stageTextHolder{
+     width: 100%;
+     height: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.levelsContainer
+{
+     margin:3.5% 3% 3% 3%;
+     width:94%;
+     height:94%;
+     display: grid;
+     grid-template-columns: 31.3% 31.3% 31.3%;
+     grid-template-rows: 23.125% 23.125% 23.125% 23.125%;
+     column-gap: 3%;
+     row-gap: 2.5%;
+}
+.weaponsMenu
+{
+     display: none;
+}
+
+.playerStat
+{
+     width: 25%;
+     height: 60%;
+     margin-top: 5%;
+     margin-left: 6.25%;
+     border-radius: 10px;
+     opacity: 1;
+     border: 5px solid #341701;
+}
+.back
+{
+     width:10%;
+     height:8%;
+     background-color: gray;
+     font-size: 2rem;
+     top:2%;
+     left:1.3%;
+     position: absolute;
+     transition: width 1s, height 1s, top 1s, left 1s, font-size 1s;
+}
+.back:hover
+{
+     width:12%;
+     height:9.6%;
+     background-color: white;
+     font-size: 2.4rem;
+     top:1.2%;
+     left:0.3%;
+     position: absolute;
+}
+.playerStatHolder
+{   
+     width: 101%;
+     height: 70%;
+     background-color: #341701;
+}
+#levelPoints
+{
+     margin-top: 5%;
+}
+.levelUpPoints
+{
+     justify-content: center;
+     display: flex;
+     margin-top:100%;
+     margin-left:15%;
+     width:70%;
+     height:15%;
+     background-color: bisque;
+     border-radius: 10px;
+}
+.titleContainer
+{
+     background-color: #341701;
+     justify-content: center;
+     display: flex;
+}
+.buttonUpgrade
+{
+     opacity: 1;
+     margin-top: 7%;
+     color: black;
+     background-color: gray;
+     margin-left: 20%;
+     font-size: 150%;
+     width: 60%;
+     height: 20%;
+     border-radius: 20px;
+     transition: margin-top 1s, background-color 1.2s, font-size 1s,width 1s, height 1s, margin-left 1s;
+}
+.buttonUpgrade:hover
+{
+     opacity: 1;
+     margin-left: 17.5%;
+     margin-top: 10.2%;
+     width: 65%;
+     height: 21.6%;
+     font-size: 163%;
+     background-color: white;
+}
+.playerStatInfo
+{
+     opacity: 1;
+     margin-top: 40%;
+     font-size: 4rem;
+     color: white;
+}
+.playerStatTitle
+{
+     opacity: 1;
+     font-size: 2rem;
+     color: white;
+}
+.playerStatDiv
+{
+     display: flex;
+     top:18.8%;
+     left:36.6%;
+     width:60%;
+     height:75%;
+     background-color:#4f2100;
+     border-radius:15px;
+     position:absolute;
+}
+#characterMenuTitle
+{
+     margin-left: 35%;
+     margin-top: 1.4%;
+     color: white;
+}
+.characterMenuHeadTitle
+{
+     width: 100%;
+     height: 12%;
+     background-color: black;
+     opacity: 0.7;
+     position: absolute;
+}
+.button
+{
+     margin-top: 14%;
+     color: black;
+     background-color: gray;
+     margin-left: 20%;
+     font-size: 150%;
+     width: 60%;
+     height: 40%;
+     border-radius: 20px;
+     transition: margin-top 1s, background-color 1.2s, font-size 1s,width 1s, height 1s, margin-left 1s;
+}
+ .characterDiv
+ {
+      left: 7%;
+      top: 25%;
+      width: 20%;
+      height: 50%;
+      background-color: #341701;
+      opacity: 1;
+      position: absolute;
+ }
+ .button:hover
+ {
+      margin-left: 17.5%;
+      margin-top: 13.2%;
+      width: 65%;
+      height: 43.3%;
+      font-size: 163%;
+      background-color: white;
+ }
+ #characterMenuCharacter
+ {
+     left: 1%;
+     width: 96%;
+     height: 96%;
+     opacity: 1;
+     position: absolute;
+ }
+#canvas1
+{
+     border: 5px solid black;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     height: 100%;
+     width: 100%;
+     display: none;
+}
+.inventoryHolder
+{
+     left: 60%;
+     top: 20%;
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     column-gap: 3%;
+     row-gap: 3%;
+     width: 30%;
+     background-color: gray;
+     height: 45%;
+     border: 5px solid black;
+     padding: 10px;
+     position: absolute;
+}
+.inventoryC1
+{
+     border: 2px solid black;
+}
+
+#player_idle, #player_running, #player_jump_start, #player_jump_end, #player_attack, #background,
+#enemy_idle, #enemy_hurt, #enemy_dead, #enemy_defending, #enemy_attack1, #enemy_attack2, #enemy_running
+#menu
+{
+    display: none;
+}
+.hidden
+{
+     display: none;
+}
+#upgradeMenu
+{
+     display:none;
+}
+#mainMenu
+{
+     background-color: #662B00;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+}
+#menu
+{ 
+   width: 100%;
+   height: 100%;
+ 
+}
+.menu_coins
+{
+     margin-top: 5%;
+     margin-left: 5%;
+     width: 10%;
+     height: 10%;
+     position: absolute;
+     top: 10%;
+     left: 10%;
+     transform: translate(-100%,-100%);
+
+}
+.menu_text
+{
+     position: absolute;
+     font-size: 2em;
+     top: 18%;
+     left: 11%;
+     transform: translate(-100%,-100%);
+     color: whitesmoke;
+    
+}
+.upgrades
+{
+     position: absolute;
+}
+#healthSymbol
+{
+     margin-left: 30%;
+     top: 15%;
+}
+#starSymbol
+{
+     top: 23.3%;
+     margin-left: 5.8%;
+     height: 5%;
+     width: 3%;
+     position: absolute;
+}
+#upgradeArea
+{
+     top: 5%;
+     width: 70%;
+     height: 100%;
+     margin-left: 0%;
+}
+#upgradeDiv
+{
+     margin-left: 25%;
+}
+#starSymbolHolder
+{
+    top: 22%;
+    margin-left: 5%;
+    height: 8.8%;
+    width: 9.9%;
+    position: absolute;
+}
+#levelUpText
+{
+     margin-left: 10.1%;
+     color: whitesmoke;
+     top:23.75%;
+     font-size: 2em;
+}
+#div1
+{
+     top: 8%;
+}
+#div2
+{
+     top:18%;
+}
+.divClass
+{
+     width: 15%;
+     height: 15%;
+     position: absolute;
+}
+.bar
+{
+     width: 66%;
+     height: 58%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     position: absolute;
+}
+.symbol
+{
+     top:32%;
+     margin-left: 22%;
+     width: 17%;
+     height: 30%;
+     position: absolute;
+}
+#text0, #text1
+{
+     font-size: 30px;
+}
+.text
+{
+     color: whitesmoke;
+     top:35%;
+     font-size: 40px;
+     margin-left: 50%;
+     position: absolute;
+}
+.increase
+{
+     top: 39%;
+     margin-left: 70%;
+     width:7.5%;
+     height: 18%;
+     position: absolute;
+}
+#div3
+{
+     top: 20%;
+     width:20%;
+     height: 20%;
+}
+#div4
+{
+     top: 40%;
+     width:20%;
+     height: 20%;
+}
+#div5
+{
+     top: 70%;
+     left: 67%;
+     width: 22%
+}
+#div6
+{
+     left:48%;
+     top:35%;
+     transform: translate(-50%, -50%);
+     width:32%;
+     height:32%;
+}
+#div7
+{
+     left:48%;
+     top:50%;
+     transform: translate(-50%, -50%);
+     width:32%;
+     height:32%;
+}
+#div8
+{
+     left:48%;
+     top:65%;
+     transform: translate(-50%, -50%);
+     width:32%;
+     height:32%;
+}
+#question
+{
+     color:orange;
+     margin-right: 0%;
+     font-size: 2em;
+     top: 33%;
+}
+#playButton
+{
+     left: 60%;
+}
+#information
+{
+     color: whitesmoke;
+     left: 48%;
+     top: 80%;
+     position: absolute;
+}

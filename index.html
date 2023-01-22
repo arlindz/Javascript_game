@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <canvas id="canvas1"></canvas>
+        <img class="hidden"id="player_idle" src="legacy/Character/Idle/Idle-Sheet.png">
+        <img class="hidden"id="player_dead" src="legacy/Character/Dead/Dead-Sheet.png">
+        <img class="hidden"id="player_running" src="legacy/Character/Run/Run-Sheet.png">
+        <img class="hidden"id="player_jump_start" src="legacy/Character/Jump-Start/Jump-Start-Sheet.png">
+        <img class="hidden"id="player_jump_end" src="legacy/Character/Jump-End/Jump-End-Sheet.png">
+        <img class="hidden"id="player_attack" src="legacy/Character/Attack-01/Attack-01-Sheet.png">
+        <img class="hidden"id="background" src="PNG/game_background_3/game_background_3.jpg">
+        <img class="hidden"id="enemy_idle" src="enemies/Knight_1/Idle.png">
+        <img class="hidden"id="enemy_hurt" src="enemies/Knight_1/Hurt.png">
+        <img class="hidden"id="enemy_dead" src="enemies/Knight_1/Dead.png">
+        <img class="hidden"id="enemy_defending" src="enemies/Knight_1/Defend.png">
+        <img class="hidden"id="enemy_running" src="enemies/Knight_1/Run.png">
+        <img class="hidden"id="enemy_attack1" src="enemies/Knight_1/Attack 1.png">
+        <img class="hidden"id="enemy_attack2" src="enemies/Knight_1/Run+Attack.png">
+        <img class="hidden"id="redknight_idle" src="enemies/Knight_3/Idle.png">
+        <img class="hidden"id="redknight_hurt" src="enemies/Knight_3/Hurt.png">
+        <img class="hidden"id="redknight_dead" src="enemies/Knight_3/Dead.png">
+        <img class="hidden" id="redknight_defending" src="enemies/Knight_3/Defend.png">
+        <img class="hidden"id="redknight_walking" src="enemies/Knight_3/Walk.png">
+        <img class="hidden"id="redknight_attack1" src="enemies/Knight_3/Attack 1.png">
+        <img class="hidden"id="redknight_attack2" src="enemies/Knight_3/Run+Attack.png">
+        <img class="hidden"id="waves" src="UI/Main menu/Button BG shadow.png">
+        <img class="hidden"id="necromancer_running" src="Necromancer/necromancer_running (2).png">
+        <img class="hidden"id="necromancer_attacking" src="Necromancer/necromancer_attack-removebg.png">
+        <img class="hidden"id="necromancer_hurt" src="Necromancer/necromancer_hurt.png">
+        <img class="hidden"id="necromancer_death" src="Necromancer/necromancer_death.png">
+        <img class="hidden"id="bell" src="legacy/Character/bell.jpg">
+        <img class="hidden"id="coin_image" src="UI/HUD/MONEY PANEL/Money Panel HUD.png">
+        <img class="hidden"id="coin_symbol" src="UI/UI_symbols/coin_symbol.png">
+        <img class="hidden"id="small_bar" src="UI/UI_symbols/small_bar.png">
+        <img class="hidden"id="health_rectangle" src="UI/UI_symbols/health_rectangle.png">
+        <img class="hidden"id="lightning_symbol" src="UI/UI_symbols/lightning_symbol.png">
+        <img class="hidden"id="health_symbol" src="UI/UI_symbols/health_symbol.png">
+        <img class="hidden"id="xp_rectangle" src="UI/UI_symbols/xp_rectangle.png">
+        <img class="hidden"id="star_symbol" src="UI/UI_symbols/star_symbol.png">
+        <img class="hidden"id="charge_rectangle" src="UI/UI_symbols/charge_rectangle.png">
+        <img class="hidden"id="health_bar" src="UI/UI_symbols/health_bar.png">
+      
+    <div id="upgradeMenu">
+        <img id="menu" src="menu_background.jpg">
+        <div id = "div1" class="divClass">
+            <img class="bar" src="UI/Main menu/Button BG shadow.png">
+            <img class="symbol"src="UI/UI_symbols/coin_symbol.png">
+            <h3 class="text" id="text0"></h3>
+        </div>
+        <div id = "div2" class="divClass">
+            <img class="bar" src="UI/Main menu/Button BG shadow.png">
+            <img class="symbol"src="UI/UI_symbols/star_symbol.png">
+            <h3 class="text" id="text1"></h3>
+        </div>
+        <div id="upgradeDiv">
+            <img class="upgrades"id="upgradeArea" src="UI/Main menu/Button BG shadow.png">
+            <div id = "div3" class="divClass">
+               <img class="bar" src="UI/Main menu/Button BG shadow.png">
+               <img class="symbol"src="UI/UI_symbols/health_symbol.png">
+               <h3 class="text" id="text2"></h3>
+               <img class="increase" src="UI/Upgrade/PLUS off.png" id="increase2">
+            </div>
+            <div id="div4" class="divClass">
+                <img class="bar" src="UI/Main menu/Button BG shadow.png">
+                <img class="symbol"src="UI/UI_symbols/lightning_symbol.png">
+                <h3 class="text" id="text3"></h3>
+                <img class="increase" id="increase3" src="UI/Upgrade/PLUS off.png">
+             </div>
+             <div id="div5" class="divClass">
+                <img class="bar" id="playButton"src="UI/Main menu/Button BG shadow.png">
+                <label class="text" id="question">PLAY<label>
+             </div>
+             <h1 id="information"></h1>
+        </div>
+    </div>
+    <div id="mainMenu">
+        <div id="div6" class="divClass">
+           <input id="playGameButton"type="button" value="Play" class="button">
+        </div>
+        <div id="div7" class="divClass">
+           <input id="characterButton"type="button" value="Character" class="button">
+        </div>
+        <div id="div8" class="divClass">
+           <input id="weaponsButton"type="button" value="Weapons" class="button">
+        </div>
+    </div>
+    <div id="characterMenu">
+        <div class="characterMenuHeadTitle">
+            <h1 id="characterMenuTitle">Change/Upgrade your character.</h1>
+        </div>
+        <input id="back0"type="button" value="Back" class="back">
+        <div class="characterDiv">
+           <img id="characterMenuCharacter"src="legacy/Character/Idle/Idle.gif">
+           <div class="levelUpPoints">
+                  <h1 id="levelPoints">Points:</h1>          
+           </div>
+       </div>
+       <div class="playerStatDiv">
+           <div class="playerStat">
+               <div class="playerStatHolder">
+                <div class="titleContainer">
+                 <h1 id="stat0"class="playerStatTitle"></h1>
+                </div>
+                <div class="titleContainer">
+                    <h2 id="stat00"class="playerStatInfo"></h2>
+                </div>
+               </div>
+               <input id="upgrade0"type="button" value="Upgrade" class="buttonUpgrade">
+           </div>
+           <div class="playerStat">
+               <div class="playerStatHolder">
+                <div class="titleContainer">
+                    <h1 id="stat1"class="playerStatTitle"></h1>
+                 </div>
+                 <div class="titleContainer">
+                    <h2 id="stat11"class="playerStatInfo"></h2>
+                </div>
+               </div>
+               <input id="upgrade1"type="button" value="Upgrade" class="buttonUpgrade">
+           </div>
+           <div class="playerStat">
+               <div class="playerStatHolder">
+                 <div class="titleContainer">
+                    <h1 id="stat2"class="playerStatTitle"></h1>
+                 </div>
+                 <div class="titleContainer">
+                    <h2 id="stat22"class="playerStatInfo"></h2>
+                </div>
+               </div>
+               <input id="upgrade2"type="button" value="Upgrade" class="buttonUpgrade">
+           </div>
+       </div>
+    </div>
+    <div id="levelsMenu">
+       <input id="back1"type="button" value="Back" class="back">
+       <div class="levelHolderFirst">
+            <div id="stage0" class="slidingStage">
+               <h3 id="stageName0" class="stageTextSlider" name="Village">Village</h3>
+            </div>
+            <div id="stage1"class="slidingStage">
+                <h3 id="stageName1" class="stageTextSlider"name="Mountains">Mountains</h3>
+             </div>
+             <div id="stage2"class="slidingStage">
+                <h3 id="stageName2"class="stageTextSlider"name="Arena">Arena</h3>
+             </div>
+            <div class="levelHolderSecond">
+               <div class="levelsContainer">
+                <div id="level1" class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">1</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel1"class="stageText">Village</h2></div>
+                </div>
+                <div id="level2"class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">2</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel2"class="stageText">Village</h2></div>
+                </div>
+                <div id="level3"class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">3</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel3"class="stageText">Village</h2></div>
+                </div>
+                <div id="level4"class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">4</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel4"class="stageText">Village</h2></div>
+                </div>
+                <div id="level5"class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">5</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel5"class="stageText">Village</h2></div>
+                </div>
+                <div id="level6" class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">6</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel6"class="stageText">Village</h2></div>
+                </div>
+                <div id="level7"class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">7</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel7"class="stageText">Village</h2></div>
+                </div>
+                <div id="level8" class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">8</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel8"class="stageText">Village</h2></div>
+                </div>
+                <div id="level9" class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">9</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel9"class="stageText">Village</h2></div>
+                </div>
+                <div id="level10" class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">10</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel10"class="stageText">Village</h2></div>
+                </div>
+                <div id="level11" class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">11</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel11"class="stageText">Village</h2></div>
+                </div>
+                <div id="level12" class="level">
+                    <div class="levelTextHolder"><h1 class="levelText">12</h1></div>
+                    <div class="stageTextHolder"><h2 id="stageLevel12"class="stageText">Village</h2></div>
+                </div>      
+               </div>     
+            </div>
+       </div>
+    </div>
+    <div class="weaponsMenu">
+
+    </div>
+        <audio id="the_trek">
+            <source src="the_trek_mp3.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="youll_never_guess_this">
+            <source src="youll_never_guess_this.mp3" type="audio/mpeg">
+        </audio>
+
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
